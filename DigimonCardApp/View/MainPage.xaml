@@ -23,7 +23,6 @@
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:DigimonCard">
-                    
                     <Grid Padding="5">
                         <Frame HeightRequest="88"
                                CornerRadius="23">
