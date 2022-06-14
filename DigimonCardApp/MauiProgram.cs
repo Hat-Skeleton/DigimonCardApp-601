@@ -13,8 +13,11 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
+		builder.Services.AddSingleton<DigimonService>();
 
-		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<DigimonViewModel>();
+
+        builder.Services.AddSingleton<MainPage>();
 
 		return builder.Build();
 	}
