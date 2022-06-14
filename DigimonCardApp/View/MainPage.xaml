@@ -7,21 +7,62 @@
              Title="{Binding Title}"
              x:Class="DigimonCardApp.View.MainPage">
 
-    <CollectionView>
-        <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type model:DigimonCard}">
-                <model:DigimonCard CardID="BT1-001"/>
-                <model:DigimonCard CardID="BT1-002"/>
-                <model:DigimonCard CardID="BT1-003"/>
-            </x:Array>
-        </CollectionView.ItemsSource>
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="model:DigimonCard">
-                <HorizontalStackLayout>
-                    <Label Text="{Binding CardID}"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-    
+    <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="5"
+          RowDefinitions="*,auto"
+          RowSpacing="0">
+
+
+        <CollectionView
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding DigimonCards}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:DigimonCard">
+                    <Grid Padding="5">
+                        <Frame HeightRequest="88"
+                               CornerRadius="23">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DigimonViewModel}}, Path=GoToDetailsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid ColumnDefinitions="*,*">
+                                <VerticalStackLayout Grid.Column="0"
+                                                     VerticalOptions="Center">
+                                    <Label Text="{Binding CardID}" 
+                                           Style="{StaticResource SmallLabel}"/>
+                                    <Label Text="{Binding Name}" 
+                                           Style="{StaticResource LargeLabel}"/>
+                                </VerticalStackLayout>
+                                <CheckBox Grid.Column="1" HorizontalOptions="End"></CheckBox>
+
+                            </Grid>
+
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+
+        <Button Text="BT1 - New Evolution"
+                Command="{Binding GetDigimonCardsCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                
+                Margin="8"/>
+
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+
 </ContentPage>
