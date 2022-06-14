@@ -12,7 +12,7 @@
 
             <Image
 
-                    BackgroundColor="#0D051B"
+                    BackgroundColor="#000000"
                     Margin="10"
                         HeightRequest="250"
                         Source="{Binding DigimonCard.CardID, StringFormat='https://world.digimoncard.com/images/cardlist/card/{0}.png'}"
