@@ -57,6 +57,7 @@ public partial class DigimonViewModel : BaseViewModel
                     }
                 }
             }
+            
         }
         catch (Exception ex)
         {

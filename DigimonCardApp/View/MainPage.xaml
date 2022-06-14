@@ -9,12 +9,16 @@
 
     <Grid ColumnDefinitions="*,*"
           ColumnSpacing="5"
-          RowDefinitions="*,auto"
+          RowDefinitions="auto,*,auto"
           RowSpacing="0">
+
+        <SearchBar
+            Grid.ColumnSpan="2"/>
 
 
         <CollectionView
             Grid.ColumnSpan="2"
+            Grid.Row="1"
             ItemsSource="{Binding DigimonCards}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
@@ -50,7 +54,7 @@
                 Command="{Binding GetDigimonCardsCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.ColumnSpan="2"
-                Grid.Row="1"
+                Grid.Row="2"
                 
                 Margin="8"/>
 
