@@ -1,5 +1,201 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DigimonCardApp.DetailsPage">
+             x:Class="DigimonCardApp.DetailsPage"
+             xmlns:viewmodel="clr-namespace:DigimonCardApp.ViewModel"
+             x:DataType="viewmodel:DigimonDetailsViewModel"
+             Title="{Binding DigimonCard.Name}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10">
+
+            <Image
+
+                    BackgroundColor="#0D051B"
+                    Margin="10"
+                        HeightRequest="250"
+                        Source="{Binding DigimonCard.CardID, StringFormat='https://world.digimoncard.com/images/cardlist/card/{0}.png'}"
+                        WidthRequest="179">
+                <!--<Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped=""
+                    
+                </Image.GestureRecognizers>-->
+            </Image>
+
+            <Label Style="{StaticResource CardHeader}" 
+                    Text="{Binding DigimonCard.SetNumber}"/>
+
+            <Label Style="{StaticResource CardHeader}" 
+                Text="{Binding DigimonCard.Name}"
+                   Margin="0,0,0,20"/>
+
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5"
+                RowDefinitions="*,*">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Style="{StaticResource CardTitle}"
+                   Text="Card Type"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.CardType}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardTitle}"
+                   Text="Rarity"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Rarity}"/>
+
+            </Grid>
+
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5"
+                RowDefinitions="*,*">
+
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                    Style="{StaticResource CardTitle}"
+                   Text="Colour 1"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardInfo}"
+                       Text="{Binding DigimonCard.CardColour1}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardTitle}"
+                   Text="Colour 2"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardInfo}"
+                    Text="{Binding DigimonCard.CardColour2}"/>
+            </Grid>
+
+
+
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5"
+                RowDefinitions="*,*">
+
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Style="{StaticResource CardTitle}"
+                   Text="DP"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.DP}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardTitle}"
+                   Text="Play Cost"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.PlayCost}"/>
+
+            </Grid>
+
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="5"
+                RowDefinitions="*,*">
+
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Style="{StaticResource CardTitle}"
+                   Text="Digivolve Cost 1"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.DigivolveCost1}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardTitle}"
+                   Text="Digivolve Cost 2"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.DigivolveCost2}"/>
+
+            </Grid>
+
+
+            <Grid
+                ColumnDefinitions="1*,1*,1*"
+                ColumnSpacing="5"
+                RowDefinitions="*,*">
+
+                <Label Grid.Row="0"
+                       Grid.Column="0" 
+                    Style="{StaticResource CardTitle}"
+                   Text="Form"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Form}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource CardTitle}"
+                   Text="Attribute"/>
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Attribute}"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="2"
+                       Style="{StaticResource CardTitle}"
+                   Text="Type"/>
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                       Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Type}"/>
+
+            </Grid>
+
+
+            <Label Style="{StaticResource CardTitle}"
+                   Text="Effect"/>
+            <Label Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Effect}"/>
+
+            <Label Style="{StaticResource CardTitle}"
+                   Text="Digivolve Effect"/>
+            <Label Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.DigivolveEffect}"/>
+
+            <Label Style="{StaticResource CardTitle}"
+                   Text="Security Effect"/>
+            <Label Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.SecurityEffect}"/>
+
+            <Label Style="{StaticResource CardTitle}"
+                Text="Set"/>
+            <Label Style="{StaticResource CardInfo}"
+                   Text="{Binding DigimonCard.Set}"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Card not collected"
+                        FontSize="20"
+                        BackgroundColor="IndianRed"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>

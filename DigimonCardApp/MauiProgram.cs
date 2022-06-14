@@ -16,8 +16,10 @@ public static class MauiProgram
 		builder.Services.AddSingleton<DigimonService>();
 
 		builder.Services.AddSingleton<DigimonViewModel>();
+		builder.Services.AddTransient<DigimonDetailsViewModel>();
 
         builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddTransient<DetailsPage>();
 
 		return builder.Build();
 	}

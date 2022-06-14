@@ -13,8 +13,19 @@ public partial class DigimonViewModel : BaseViewModel
     {
         Title = "Booster Sets";
         this.digimonService = digimonService;
-        
+    }
 
+    [ICommand]
+    async Task GoToDetailsAsync(DigimonCard digimonCard)
+    {
+        if (digimonCard is null)
+            return;
+
+        await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true,
+            new Dictionary<string, object>
+        {
+            { "DigimonCard", digimonCard }
+        });
     }
 
     [ICommand]
