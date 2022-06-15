@@ -4,9 +4,11 @@
              x:Class="DigimonCardApp.AppShell"
              xmlns:view="clr-namespace:DigimonCardApp.View"
              Title="Monkeys"
-             FlyoutBehavior="Disabled">
+             FlyoutBehavior="Flyout">
 
-
+    
+        
+    
 
     <Shell.Resources>
         <ResourceDictionary>
@@ -25,12 +27,51 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Search"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
 
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Booster Sets"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
+
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Theme Booster"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
+
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Starter Deck"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
+    
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Promo"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
+    
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Event"
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="HomePage" />
 
     <ShellContent
         Shell.NavBarIsVisible="true"
         Title="Monkeys"
         ContentTemplate="{DataTemplate view:MainPage}"
         Route="MainPage" />
+
+    
+
+
 
 </Shell>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigimonCardApp.View.Booster"
+             Title="Booster">
+    <ScrollView Padding="10">
+        <StackLayout>
+            <Frame
+            HeightRequest="88"
+            CornerRadius="23"
+            Style="{StaticResource SetCard}"
+                IsClippedToBounds="True">
+                <Grid ColumnDefinitions="*"
+                      RowDefinitions="*"
+                      Margin="-20">
+                    <Image Source="bt1"
+                       Aspect="AspectFill"
+                       Margin="-20"
+                       Grid.Column="0"
+                       Grid.Row="0"/>
+                    <Label Text="BT1 - New Evolution"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           TextTransform="Uppercase"
+                           Padding="10,0,0,0"
+                           FontSize="25"
+                           TextColor="White"
+                           />
+                </Grid>
+
+
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

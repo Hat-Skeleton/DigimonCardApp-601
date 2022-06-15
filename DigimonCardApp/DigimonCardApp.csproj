@@ -40,4 +40,21 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\bt1.png" />
+	  <None Remove="Resources\Images\bt2.png" />
+	  <None Remove="Resources\Images\bt3.png" />
+	  <None Remove="Resources\Images\bt4.png" />
+	  <None Remove="Resources\Images\bt5.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\Booster.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
 </Project>

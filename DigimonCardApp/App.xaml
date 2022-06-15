@@ -93,6 +93,10 @@
 
             </Style>
 
+            <Style x:Key="SetCard" TargetType="Frame">
+                <Setter Property="Margin" Value="0,20,0,0"/>
+            </Style>
+
             <Style x:Key="InfoFrame" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="#2B1B3C"/>
                 <Setter Property="CornerRadius" Value="40"/>

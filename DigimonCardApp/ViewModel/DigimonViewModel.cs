@@ -2,11 +2,11 @@
 
 namespace DigimonCardApp.ViewModel;
 
-public partial class DigimonViewModel : BaseViewModel
+public partial class DigimonViewModel : BaseViewModel 
 {
     DigimonService digimonService;
     public ObservableCollection<DigimonCard> DigimonCards { get; } = new();
-    
+
 
 
     public DigimonViewModel(DigimonService digimonService)
@@ -14,6 +14,55 @@ public partial class DigimonViewModel : BaseViewModel
         Title = "Booster Sets";
         this.digimonService = digimonService;
     }
+
+
+   
+
+    [ICommand]
+    async Task SearchCards(string query)
+    {
+        if (IsBusy)
+            return;
+        try
+        {
+            IsBusy = true;
+            var digimonCards = await digimonService.GetDigimonCard();
+
+            if (DigimonCards.Count != 0)
+                DigimonCards.Clear();
+
+            foreach (var digimoncard in digimonCards)
+            {
+                
+                string cardid = digimoncard.Name.ToLower();
+                if (cardid.Contains(query.ToLower()))
+                {
+
+                    DigimonCards.Add(digimoncard);
+
+                }
+            }
+
+            if (DigimonCards.Count == 0)
+            {
+
+                await Shell.Current.DisplayAlert("No Cards Found",
+                 $"Try again\n:", "OK");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            //Debug.WriteLine(ex);
+            //await Shell.Current.DisplayAlert("Error!",
+            //    $"Here's why it not work\n: {ex.Message}", "OK");
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+
 
     [ICommand]
     async Task GoToDetailsAsync(DigimonCard digimonCard)
@@ -57,7 +106,7 @@ public partial class DigimonViewModel : BaseViewModel
                     }
                 }
             }
-            
+
         }
         catch (Exception ex)
         {
