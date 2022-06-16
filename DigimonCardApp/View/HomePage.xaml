@@ -29,26 +29,23 @@
             Grid.Row="1"
             ItemsSource="{Binding DigimonCards}"
             SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="3"/>
+            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:DigimonCard">
                     <Grid Padding="5">
-                        <Frame HeightRequest="88"
-                               CornerRadius="23">
+                        <Frame HeightRequest="178"
+                               CornerRadius="10">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer CommandParameter="{Binding .}"
                                                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DigimonViewModel}}, Path=GoToDetailsCommand}"/>
                             </Frame.GestureRecognizers>
-                            <Grid ColumnDefinitions="*,*">
-                                <VerticalStackLayout Grid.Column="0"
-                                                     VerticalOptions="Center">
-                                    <Label Text="{Binding CardID}" 
-                                           Style="{StaticResource SmallLabel}"/>
-                                    <Label Text="{Binding Name}" 
-                                           Style="{StaticResource LargeLabel}"/>
-                                </VerticalStackLayout>
-                                <CheckBox Grid.Column="1" HorizontalOptions="End"></CheckBox>
-
-                            </Grid>
+                            <Image Source="{Binding CardID, StringFormat='https://world.digimoncard.com/images/cardlist/card/{0}.png'}"
+                                   Margin="-20">
+                                
+                            </Image>
 
                         </Frame>
                     </Grid>

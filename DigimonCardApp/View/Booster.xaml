@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:DigimonCardApp.Model"
+             xmlns:viewmodel="clr-namespace:DigimonCardApp.ViewModel"
+             x:DataType="viewmodel:DigimonViewModel"
              x:Class="DigimonCardApp.View.Booster"
              Title="Booster">
     <ScrollView Padding="10">
@@ -10,6 +13,13 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True">
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        CommandParameter="{Binding Text, Source={x:Reference setName}}"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DigimonViewModel}}, Path=NavigateCommand}"/>
+                </Frame.GestureRecognizers>
+
                 <Grid ColumnDefinitions="*"
                       RowDefinitions="*"
                       Margin="-20">
@@ -18,7 +28,10 @@
                        Margin="-20"
                        Grid.Column="0"
                        Grid.Row="0"/>
-                    <Label Text="BT1 - New Evolution"
+                    <HorizontalStackLayout>
+                        <Label
+                            Text="BT1 - "
+                            
                            Grid.Column="0"
                            Grid.Row="0"
                            HorizontalTextAlignment="Start"
@@ -28,10 +41,27 @@
                            FontSize="25"
                            TextColor="White"
                            />
+
+                        <Label Text="New Evolution"
+                               x:Name="setName"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           TextTransform="Uppercase"
+                           Padding="10,0,0,0"
+                           FontSize="25"
+                           TextColor="White"
+                           />
+                    </HorizontalStackLayout>
+                    
                 </Grid>
+                
 
 
             </Frame>
+            <Button Command="{Binding NavigateCommand}"
+                        Text="Hello"/> 
         </StackLayout>
     </ScrollView>
 </ContentPage>

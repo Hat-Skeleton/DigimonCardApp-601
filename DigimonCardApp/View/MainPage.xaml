@@ -4,7 +4,7 @@
              xmlns:model="clr-namespace:DigimonCardApp.Model"
              xmlns:viewmodel="clr-namespace:DigimonCardApp.ViewModel"
              x:DataType="viewmodel:DigimonViewModel"
-             Title="{Binding Title}"
+             Title="{Binding Set}"
              x:Class="DigimonCardApp.View.MainPage">
 
     <Grid ColumnDefinitions="*,*"

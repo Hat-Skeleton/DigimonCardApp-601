@@ -35,8 +35,8 @@
 
         <ShellContent
         Title="Booster Sets"
-        ContentTemplate="{DataTemplate view:HomePage}"
-        Route="HomePage" />
+        ContentTemplate="{DataTemplate view:Booster}"
+        Route="Booster Sets" />
 
         <ShellContent
         Title="Theme Booster"
