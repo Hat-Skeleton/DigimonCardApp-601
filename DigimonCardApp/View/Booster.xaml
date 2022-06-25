@@ -12,7 +12,8 @@
             HeightRequest="88"
             CornerRadius="23"
             Style="{StaticResource SetCard}"
-                IsClippedToBounds="True">
+                IsClippedToBounds="True"
+                BackgroundColor="#2B1B3C">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -23,11 +24,7 @@
                 <Grid ColumnDefinitions="*"
                       RowDefinitions="*"
                       Margin="-20">
-                    <Image Source="bt1"
-                       Aspect="AspectFill"
-                       Margin="-20"
-                       Grid.Column="0"
-                       Grid.Row="0"/>
+                    
                     <HorizontalStackLayout>
                         <Label
                             Text="BT1 - "
@@ -38,7 +35,7 @@
                            VerticalTextAlignment="Center"
                            TextTransform="Uppercase"
                            Padding="10,0,0,0"
-                           FontSize="25"
+                           FontSize="20"
                            TextColor="White"
                            />
 
@@ -50,9 +47,10 @@
                            VerticalTextAlignment="Center"
                            TextTransform="Uppercase"
                            Padding="10,0,0,0"
-                           FontSize="25"
+                           FontSize="20"
                            TextColor="White"
                            />
+                        <ProgressBar />
                     </HorizontalStackLayout>
                     
                 </Grid>
@@ -60,8 +58,6 @@
 
 
             </Frame>
-            <Button Command="{Binding NavigateCommand}"
-                        Text="Hello"/> 
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -15,5 +15,10 @@ public partial class MainPage : ContentPage
         base.OnNavigatedTo(args);
 		
     }
+
+    private void ContentPage_Loaded(object sender, EventArgs e)
+    {
+
+    }
 }
 
