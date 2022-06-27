@@ -6759,7 +6759,7 @@
     "Effect": "",
     "DigivolveEffect": "[When Attacking] When this Digimon attacks a player, it gets +1000 DP for the turn.",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT6-002_P1",
@@ -6780,7 +6780,7 @@
     "Effect": "",
     "DigivolveEffect": "[Your Turn][Once Per Turn] When one of your opponent's digivolution cards is trashed, trigger ＜Draw 1＞. (Draw 1 card from your deck.)",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT6-003_P1",
@@ -6801,7 +6801,7 @@
     "Effect": "",
     "DigivolveEffect": "[When Attacking][Once Per Turn] If you have 3 security cards, gain 1 memory.",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT6-004_P1",
@@ -6822,7 +6822,7 @@
     "Effect": "",
     "DigivolveEffect": "[When Attacking][Once Per Turn] If you attack an opponent's Digimon, trigger ＜Draw 1＞. (Draw 1 card from your deck.)",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT6-005_P1",
@@ -6843,7 +6843,7 @@
     "Effect": "",
     "DigivolveEffect": "[On Deletion] Reveal the top card of your deck. Add it to your hand if it's a black Digimon card. Otherwise, place it at the bottom of your deck.",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT6-006_P1",
@@ -6864,7 +6864,7 @@
     "Effect": "",
     "DigivolveEffect": "[Your Turn][Once Per Turn] When you trash a card in your hand using one of your effects, trigger ＜Draw 1＞. (Draw 1 card from your deck.)",
     "SecurityEffect": "",
-    "Set": "BOOSTER -DOUBLE DIAMOND- [BT-06]"
+    "Set": "BOOSTER DOUBLE DIAMOND [BT-06]"
   },
   {
     "CardID": "BT4-001",
@@ -30742,26 +30742,5 @@
     "DigivolveEffect": "[Your Turn] All of your opponent's Security Digimon get -1000 DP.",
     "SecurityEffect": "",
     "Set": "Winner Pack NEXT ADVENTURE"
-  },
-  {
-    "CardID": "",
-    "CardColour1": null,
-    "CardColour2": null,
-    "SetNumber": null,
-    "Rarity": null,
-    "CardType": null,
-    "Level": null,
-    "Name": null,
-    "Form": null,
-    "Attributr": null,
-    "Type": null,
-    "DP": null,
-    "PlayCost": null,
-    "DigivolveCost1": null,
-    "DigivolveCost2": null,
-    "Effect": null,
-    "DigivolveEffect": null,
-    "SecurityEffect": null,
-    "Set": null
   }
 ]

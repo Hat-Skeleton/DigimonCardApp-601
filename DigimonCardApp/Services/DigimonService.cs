@@ -31,7 +31,7 @@ public class DigimonService
         using var reader = new StreamReader(stream);
         var contents = await reader.ReadToEndAsync();
         digimonCardList = JsonSerializer.Deserialize<List<DigimonCard>>(contents);
-
+        digimonCardList = digimonCardList.OrderBy(i => i.CardID).ToList(); 
         return digimonCardList;
     }
 }

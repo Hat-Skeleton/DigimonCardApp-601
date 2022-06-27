@@ -79,6 +79,7 @@ public partial class DigimonViewModel : BaseViewModel
         {
             IsBusy = true;
             var digimonCards = await digimonService.GetDigimonCard();
+            digimonCards.Sort();
 
             if (DigimonCards.Count != 0)
                 DigimonCards.Clear();

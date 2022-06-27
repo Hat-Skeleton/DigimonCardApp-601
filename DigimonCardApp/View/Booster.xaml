@@ -13,7 +13,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -53,7 +53,8 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
+                           Progress="0.37"
+                                 Margin="3"
                                  ProgressColor="Green"/>
                 </Grid>
             </Frame>
@@ -63,7 +64,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -103,7 +104,8 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
+                           Progress="1"
+                                 Margin="3"
                                  ProgressColor="Green"/>
                 </Grid>
             </Frame>
@@ -113,7 +115,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -153,7 +155,8 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
+                           Progress="0.87"
+                                 Margin="3"
                                  ProgressColor="Green"/>
                 </Grid>
             </Frame>
@@ -163,7 +166,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -203,7 +206,8 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
+                           Progress="0.12"
+                                 Margin="3"
                                  ProgressColor="Green"/>
                 </Grid>
             </Frame>
@@ -213,7 +217,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -253,7 +257,8 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
+                           Progress="0.2"
+                                 Margin="3"
                                  ProgressColor="Green"/>
                 </Grid>
             </Frame>
@@ -263,7 +268,7 @@
             CornerRadius="23"
             Style="{StaticResource SetCard}"
                 IsClippedToBounds="True"
-                BackgroundColor="#2B1B3C">
+                BackgroundColor="#382D43">
 
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -303,8 +308,10 @@
 
                     </HorizontalStackLayout>
                     <ProgressBar Grid.Row="1"
-                           Progress="0.5"
-                                 ProgressColor="Green"/>
+                                 
+                           Progress="0.99"
+                                 ProgressColor="Green"
+                                 Margin="3"/>
                 </Grid>
             </Frame>
 

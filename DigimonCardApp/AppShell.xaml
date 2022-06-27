@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigimonCardApp.AppShell"
              xmlns:view="clr-namespace:DigimonCardApp.View"
-             Title="Monkeys"
-             >
+             x:Name="shell"
+             FlyoutBackdrop="#15FFFFFF"
+       FlyoutWidth="250">
 
 
 
@@ -27,27 +28,32 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="logo"
+                   HorizontalOptions="Center"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
     <Shell.ItemTemplate>
         <DataTemplate>
-            <Grid ColumnDefinitions="50,*" Padding="10">
-                <Label Grid.Column="1" Text="{Binding Title}"/>
+            <Grid ColumnDefinitions="20,*" Padding="10">
+                <Label Grid.Column="1" Text="{Binding Title}" FontSize="20"/>
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
-    <Shell.MenuItemTemplate>
-        <DataTemplate>
-            <Grid ColumnDefinitions="50,*" Padding="10">
-                <Label Grid.Column="1" Text="{Binding Title}"
-                       BackgroundColor="White"
-                       TextColor="Black"/>
-            </Grid>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>
+
+    
+    
     
     <FlyoutItem Title="Search">
         <ShellContent
         Title="Search"
         ContentTemplate="{DataTemplate view:HomePage}"
+         
         Route="HomePage" />
     </FlyoutItem>
 
