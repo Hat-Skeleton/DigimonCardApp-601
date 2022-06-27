@@ -21,15 +21,17 @@
             Placeholder="Search card name..."           
             SearchCommand="{Binding SearchCardsCommand}"
             SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"
-            IsEnabled="{Binding IsNotBusy}"/>
+            IsEnabled="{Binding IsNotBusy}"
+            />
+        
 
 
         <CollectionView
             Grid.ColumnSpan="2"
             Grid.Row="1"
             ItemsSource="{Binding DigimonCards}"
-            SelectionMode="None"
-            EmptyView="No Results">
+            SelectionMode="None">
+           
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
                                  Span="3"/>
@@ -37,8 +39,8 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:DigimonCard">
                     <Grid Padding="5">
-                        <Frame HeightRequest="178"
-                               CornerRadius="10">
+                        <Frame HeightRequest="177"
+                               CornerRadius="12">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer CommandParameter="{Binding .}"
                                                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DigimonViewModel}}, Path=GoToDetailsCommand}"/>

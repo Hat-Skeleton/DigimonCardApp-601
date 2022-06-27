@@ -79,7 +79,6 @@ public partial class DigimonViewModel : BaseViewModel
         {
             IsBusy = true;
             var digimonCards = await digimonService.GetDigimonCard();
-            digimonCards.Sort();
 
             if (DigimonCards.Count != 0)
                 DigimonCards.Clear();
@@ -96,12 +95,7 @@ public partial class DigimonViewModel : BaseViewModel
                 }
             }
 
-            if (DigimonCards.Count == 0)
-            {
-
-                await Shell.Current.DisplayAlert("No Cards Found",
-                 $"Try again\n:", "OK");
-            }
+            
 
         }
         catch (Exception ex)
