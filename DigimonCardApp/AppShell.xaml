@@ -27,40 +27,49 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="50,*" Padding="10">
+                <Label Grid.Column="1" Text="{Binding Title}"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="50,*" Padding="10">
+                <Label Grid.Column="1" Text="{Binding Title}"
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    
+    <FlyoutItem Title="Search">
         <ShellContent
         Title="Search"
         ContentTemplate="{DataTemplate view:HomePage}"
         Route="HomePage" />
+    </FlyoutItem>
 
+    <FlyoutItem Title="Booster Sets">
         <ShellContent
         Title="Booster Sets"
         ContentTemplate="{DataTemplate view:Booster}"
         Route="Booster Sets" />
+    </FlyoutItem>
 
+    <FlyoutItem Title="Theme Booster">
         <ShellContent
         Title="Theme Booster"
         ContentTemplate="{DataTemplate view:HomePage}"
         Route="HomePage" />
+    </FlyoutItem>
 
-
+    <FlyoutItem Title="Starter Deck">
         <ShellContent
         Title="Starter Deck"
         ContentTemplate="{DataTemplate view:HomePage}"
         Route="HomePage" />
+    </FlyoutItem>
 
-        <ShellContent
-        Title="Starter Deck"
-        ContentTemplate="{DataTemplate view:HomePage}"
-        Route="HomePage" />
-
-        <ShellContent
-        Title="Event"
-        ContentTemplate="{DataTemplate view:HomePage}"
-        Route="HomePage" />
-
-    <ShellContent
-        Title="Og page"
-        ContentTemplate="{DataTemplate view:MainPage}"
-        Route="MainPage" />
 </Shell>

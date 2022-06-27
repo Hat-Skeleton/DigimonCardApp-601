@@ -7,7 +7,7 @@ namespace DigimonCardApp.ViewModel;
 public partial class DigimonViewModel : BaseViewModel
 {
     DigimonService digimonService;
-    public ObservableCollection<DigimonCard> DigimonCards { get; } = new();
+    public ObservableCollection<DigimonCard> DigimonCards { get; set; } = new();
 
     [ObservableProperty]
     string set;
@@ -101,6 +101,8 @@ public partial class DigimonViewModel : BaseViewModel
             return;
         try
         {
+
+            //try adding to list then order, then add to DigimonCards
             IsBusy = true;
             var digimonCards = await digimonService.GetDigimonCard();
 
@@ -109,7 +111,7 @@ public partial class DigimonViewModel : BaseViewModel
 
             foreach (var digimoncard in digimonCards)
             {
-                //
+              
                 string cardid = digimoncard.CardID;
                 if (cardid.Contains("BT1-"))
                 {
@@ -119,7 +121,7 @@ public partial class DigimonViewModel : BaseViewModel
                     }
                 }
             }
-
+            DigimonCards = new ObservableCollection<DigimonCard>(DigimonCards.OrderByDescending(i => i.CardID).ToList());
         }
         catch (Exception ex)
         {
