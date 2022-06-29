@@ -3,7 +3,7 @@
 namespace DigimonCardApp.ViewModel;
 
 [QueryProperty(nameof(Set), nameof(Set))]
-
+//comment
 public partial class DigimonViewModel : BaseViewModel
 {
     DigimonService digimonService;
