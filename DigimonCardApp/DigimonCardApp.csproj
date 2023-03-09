@@ -48,6 +48,7 @@
 	  <None Remove="Resources\Images\bt4.png" />
 	  <None Remove="Resources\Images\bt5.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Raw\DigimonApp.json" />
 	</ItemGroup>
 
 	<ItemGroup>
